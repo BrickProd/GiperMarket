@@ -1,0 +1,30 @@
+﻿<Window x:Class="Barebuh.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barebuh"
+        mc:Ignorable="d"
+        Title="Shell" Height="500" Width="700" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <SolidColorBrush Color="#592e3e" x:Key="Brush1"></SolidColorBrush>
+        <SolidColorBrush Color="#f25c69" x:Key="Brush2"></SolidColorBrush>
+        <SolidColorBrush Color="#f2f2f2" x:Key="Brush3"></SolidColorBrush>
+        <SolidColorBrush Color="#f2de79" x:Key="Brush4"></SolidColorBrush>
+        <SolidColorBrush Color="#d96f66" x:Key="Brush5"></SolidColorBrush>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="126*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Grid  Grid.Row="0" Grid.ColumnSpan="2" Background="{StaticResource Brush1}"/>
+        <TextBlock Text="{Binding UserStatus}" HorizontalAlignment="Right" TextAlignment="Right" Height="43" VerticalAlignment="Top" Grid.Column="1" Margin="0,10,10,0" Foreground="{StaticResource Brush3}" Width="150"/>
+        <Grid Grid.Row="1" Grid.Column="0" Background="{StaticResource Brush1}"/>
+    </Grid>
+</Window>
